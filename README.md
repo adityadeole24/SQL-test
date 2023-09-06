@@ -1,6 +1,6 @@
 # SQL-test
 
-1. Design databse schema for this structure.
+1. Design database schema for this structure.
 
 ![image](https://github.com/adityadeole24/SQL-test/assets/78893669/9f8a0f0d-7b57-46de-a882-121b14fea4e2)
 
@@ -43,7 +43,7 @@ WITH EmployeeScores AS (
     GROUP BY
         e.employee_id, e.first_name, e.last_name, e.role, e.manager_id 
     UNION ALL
-    -- Calculate scores for TCs. As TCs spend only half of the time attending call and remaining half for teaching agents in thier team.
+    -- Calculate scores for TCs. As TCs spend only half of the time attending call and remaining half for teaching agents in thier team, I have divided by 2 to get average score for TC. 
     SELECT
         e.employee_id,
         e.first_name,
